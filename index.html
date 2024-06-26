@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War Eagle Segurança</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>War Eagle Segurança</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="home" class="banner">
+        <div class="container">
+            <div class="banner-content">
+                <h2>Monitoramento Inteligente com Drones</h2>
+                <p>Segurança eficiente para grandes áreas e eventos</p>
+                <a href="#services" class="btn">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <img src="ronda.png" alt="Rondas de Segurança">
+                    <h3>Rondas de Segurança</h3>
+                    <p>Monitoramento contínuo e prevenção de incidentes.</p>
+                </div>
+                <div class="service-item">
+                    <img src="evento.png" alt="Monitoramento de Eventos">
+                    <h3>Monitoramento de Eventos</h3>
+                    <p>Supervisão aérea para eventos e grandes aglomerações.</p>
+                </div>
+                <div class="service-item">
+                    <img src="pm.png" alt="Resposta Rápida">
+                    <h3>Resposta Rápida</h3>
+                    <p>Intervenção imediata em situações críticas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <h2>Contato</h2>
+            <form id="contactForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="responseMessage" style="display:none; color: green; margin-top: 20px;"></p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 War Eagle Segurança. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <!-- Link to Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            var responseMessage = document.getElementById('responseMessage');
+
+            if (name === 'matheus' && email === 'matheus.rabelo.lima@hotmail.com' && message.toLowerCase() === 'quais são os planos disponiveis') {
+                responseMessage.textContent = 'Recebemos sua mensagem, em breve entraremos em contato';
+                responseMessage.style.display = 'block';
+                // Aqui você pode adicionar o código para enviar o formulário.
+            } else {
+                responseMessage.textContent = 'As credenciais fornecidas estão incorretas.';
+                responseMessage.style.display = 'block';
+                responseMessage.style.color = 'red';
+            }
+        });
+    </script>
+</body>
+</html>
